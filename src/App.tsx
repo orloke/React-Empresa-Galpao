@@ -66,6 +66,7 @@ function App() {
 
       <ModalComponent show = {createModal} onHide = {handleCloseModal} createUser = {handleCreateUser} />
       <ModalUpdate show ={editModal} onHide = {handleCloseEditModal} alterarUser = {handleUpdateUser} />
+      <ModalUpdate show ={editModal} onHide = {handleCloseEditModal} alterarUser = {handleUpdateUser} />
       <ModalUpdateProvider show ={editModalProvider} onHide = {handleCloseEditModalProviders} alterarProvider = {handleUpdateProvider} />
       <ModalComponentProvider show = {createModalProvider} onHide = {handleCloseModalProvider} createProvider = {handleCreateProvider} />      
     </Fragment>

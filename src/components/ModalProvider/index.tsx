@@ -39,7 +39,7 @@ const ModalComponentProvider: React.FC<ModalComponentProviderProps> = ({show, on
     return (
         <Modal show={show} onHide = {onHide}>
             <Modal.Header closeButton>
-                <Modal.Title>Cadastrar Usuário</Modal.Title>
+                <Modal.Title>Cadastrar Fornecedor</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form onSubmit={formik.handleSubmit}>

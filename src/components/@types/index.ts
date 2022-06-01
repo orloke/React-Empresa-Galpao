@@ -4,6 +4,7 @@ export interface User {
     cpf: number|string,
     endereco: string,
     email: string,
+    telefone: number
 }
 
 export interface Providers {

@@ -20,14 +20,16 @@ const ModalUser: React.FC<ModalUserProps> = ({show, onHide, createUser}) => {
             nome: '',
             cpf: 0,
             endereco: '',
-            email: ''
+            email: '',
+            telefone: 0
         },
         onSubmit: values =>{
             createUser({
                 nome: values.nome,
                 cpf: values.cpf,
                 endereco: values.endereco,
-                email: values.email
+                email: values.email,
+                telefone: values.telefone
             })
             onHide()
         }
@@ -44,6 +46,7 @@ const ModalUser: React.FC<ModalUserProps> = ({show, onHide, createUser}) => {
                     <TabelGroup titulo = 'Cpf' type = 'number' placeholder = 'Seu Cpf' id = 'cpf' value = {formik.values.cpf} onChange = {formik.handleChange}/>
                     <TabelGroup titulo = 'Endereço' type = 'text' placeholder = 'Seu endereço' id = 'endereco' value = {formik.values.endereco} onChange = {formik.handleChange}/>
                     <TabelGroup titulo = 'Email' type = 'email' placeholder = 'Seu melhor email' id = 'email' value = {formik.values.email} onChange = {formik.handleChange}/>
+                    <TabelGroup titulo = 'Telefone' type = 'tel' placeholder = 'Seu melhor telefone' id = 'telefone' value = {formik.values.telefone} onChange = {formik.handleChange}/>
                     <Form.Group>
                         <Button variant='success' type='submit' style={{marginRight: 15}} >Salvar</Button>
                         <Button variant='danger' onClick={formik.handleReset} >Limpar</Button>
