@@ -1,0 +1,16 @@
+.btn{
+    margin-right: 5px;
+}
+
+.container_choice{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    background-color: #ecedee;
+    display: flex;
+    padding: 1% !important;
+}
+
+h5{
+    margin: auto 0 !important;
+    margin-right: 1% !important;
+}
