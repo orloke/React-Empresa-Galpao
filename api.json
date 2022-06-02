@@ -35,14 +35,6 @@
       "id": 9
     },
     {
-      "nome": "Sem Luz",
-      "registro": 4787112316,
-      "endereco": "Rua Poste",
-      "email": "luz@gmail.com",
-      "telefone": "454544876154",
-      "id": 10
-    },
-    {
       "nome": "Empresa da Hora",
       "registro": 251436578,
       "endereco": "Rua da Hora",
@@ -90,13 +82,6 @@
       "preco": 0.5,
       "quantidade": 200,
       "id": 15
-    },
-    {
-      "nome": "Caderno",
-      "descricao": "Bom para escrever",
-      "preco": 25,
-      "quantidade": 50,
-      "id": 16
     }
   ]
 }
