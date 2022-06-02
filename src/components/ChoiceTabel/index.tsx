@@ -17,6 +17,7 @@ const ChoiceTabel: React.FC<ChoiceTabelProps> = ({takeTable, handleChoiceTable})
             <Button variant="success" onClick={()=>handleChoiceTable('usuarios')}>Usuários</Button>
             <Button variant="success" onClick={()=>handleChoiceTable('fornecedores')}>Fornecedores</Button>
             <Button variant="success" onClick={()=>handleChoiceTable('tranportadoras')}>Tranportadoras</Button>
+            <Button variant="success" onClick={()=>handleChoiceTable('produtos')}>Produtos</Button>
         </Container>
 
     )

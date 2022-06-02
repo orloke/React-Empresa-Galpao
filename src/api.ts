@@ -1,5 +1,5 @@
 import axios from "axios";
-import { User, Providers, Transport } from "./components/@types";
+import { User, Providers, Transport, Products } from "./components/@types";
 
 const api = axios.create({baseURL:"http://localhost:3333"})
 
@@ -52,4 +52,20 @@ export const updateTransport = async (id:number,user: Omit<Transport, 'id'>): Pr
 
 export const deleteTransport = async (id: number): Promise<void> => {
     await api.delete(`/transports/${id}`)
+}
+
+export const getProducts = async ():Promise<any> =>{
+    return await api.get('/products')
+}
+
+export const createProducts = (user: Omit<Products, 'id'>): Promise<Products> =>{
+    return api.post<Products>('/products', user).then(response=>response.data)
+}
+
+export const updateProducts= async (id:number,user: Omit<Products, 'id'>): Promise<Products> => {
+    return api.put(`/products/${id}`,user).then(response=>response.data)
+}
+
+export const deleteProducts = async (id: number): Promise<void> => {
+    await api.delete(`/products/${id}`)
 }

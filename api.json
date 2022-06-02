@@ -1,14 +1,6 @@
 {
   "users": [
     {
-      "nome": "Dering Adriano",
-      "registro": 42365,
-      "endereco": "não encontrado",
-      "email": "k@gmail.com",
-      "telefone": "156487",
-      "id": 4
-    },
-    {
       "nome": "Júnior",
       "registro": 455,
       "endereco": "rua ouro fino",
@@ -75,6 +67,36 @@
       "email": "segunda@gmail.com",
       "telefone": "645457841984",
       "id": 2
+    }
+  ],
+  "products": [
+    {
+      "nome": "Caneta",
+      "descricao": "Muito bom",
+      "preco": 1.5,
+      "quantidade": 150,
+      "id": 13
+    },
+    {
+      "nome": "Lapis",
+      "descricao": "Tem que apontar",
+      "preco": "1.00",
+      "quantidade": 100,
+      "id": 14
+    },
+    {
+      "nome": "Borracha",
+      "descricao": "Bom para usar com o lápis",
+      "preco": 0.5,
+      "quantidade": 200,
+      "id": 15
+    },
+    {
+      "nome": "Caderno",
+      "descricao": "Bom para escrever",
+      "preco": 25,
+      "quantidade": 50,
+      "id": 16
     }
   ]
 }

@@ -11,7 +11,7 @@ import '../style/style.css'
 //     openEditModal: (user:User)=> void
 // }
 
-const TabelUser: React.FC<any> = ({users, deleteUser, openEditModal, openModal, titulo, cp}) => {
+const TabelUser: React.FC<any> = ({users, deleteUser, openEditModal, openModal, titulo, cp, desativar, quinto, quarto}) => {
 
     return (
         
@@ -29,9 +29,9 @@ const TabelUser: React.FC<any> = ({users, deleteUser, openEditModal, openModal, 
                         <th>#</th>
                         <th>Nome</th>
                         <th>{cp}</th>
-                        <th>Endereço</th>
-                        <th>Email</th>
-                        <th>telefone</th>
+                        <th>{quarto}</th>
+                        <th>{quinto}</th>
+                        <th style={{display: desativar}}>telefone</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -40,10 +40,10 @@ const TabelUser: React.FC<any> = ({users, deleteUser, openEditModal, openModal, 
                         <tr key={user.id}>
                             <td>{user.id}</td>
                             <td>{user.nome}</td>
-                            <td>{user.registro}</td>
-                            <td>{user.endereco}</td>
-                            <td>{user.email}</td>
-                            <td>{user.telefone}</td>
+                            <td>{desativar == 'none' ? user.descricao : user.registro}</td>
+                            <td>{desativar == 'none' ? 'R$ ' + Number(user.preco).toFixed(2) : user.endereco}</td>
+                            <td>{desativar == 'none' ? user.quantidade : user.email}</td>
+                            <td style={{display: desativar}}>{user.telefone}</td>
                             <td>
                                 <Button type='button' variant = 'danger' style={{marginRight: 5}} onClick = {()=>deleteUser(user.id)} >
                                     <BsTrash size={18}/>

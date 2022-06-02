@@ -24,3 +24,10 @@ export interface Transport {
     email: string,
     telefone: number
 }
+export interface Products {
+    id: number,
+    nome: string, //razão social
+    descricao: number,
+    preco: number,
+    quantidade: number,
+}

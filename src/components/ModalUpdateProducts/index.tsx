@@ -11,26 +11,24 @@ import { useFormik } from 'formik'
 //     onHide: ()=> void,
 // }
 
-const ModalUpdate: React.FC<any> = ({show, onHide, alterarUser, titulo}) => {
-    
+const ModalUpdateProducts: React.FC<any> = ({show, onHide, alterarUser}) => {
+
     const formik = useFormik({    
         enableReinitialize: true,    
         initialValues: {
             nome: show.nome,
-            registro: show.registro,
-            endereco: show.endereco,
-            email: show.email,
-            telefone: show.telefone
+            descricao: show.descricao,
+            preco: show.preco,
+            quantidade: show.quantidade,
         },
         onSubmit: values =>{
             alterarUser(
                 show.id,
                 {
                     nome: values.nome,
-                    registro: values.registro,
-                    endereco: values.endereco,
-                    email: values.email,
-                    telefone: values.telefone
+                    descricao: values.descricao,
+                    preco: values.preco,
+                    quantidade: values.quantidade,
                 }
             )
             onHide()
@@ -40,15 +38,14 @@ const ModalUpdate: React.FC<any> = ({show, onHide, alterarUser, titulo}) => {
     return (
         <Modal show={Object.keys(show).length > 0} onHide = {onHide}>
             <Modal.Header closeButton>
-                <Modal.Title>Alterar {titulo}</Modal.Title>
+                <Modal.Title>Alterar Produto</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form onSubmit={formik.handleSubmit}>
                     <TabelGroup titulo = 'Nome' type = 'text' placeholder = 'Seu nome' id = 'nome' value = {formik.values.nome} onChange = {formik.handleChange} />
-                    <TabelGroup titulo = 'Cpf' type = 'number' placeholder = 'Seu registro' id = 'registro' value = {formik.values.registro} onChange = {formik.handleChange}/>
-                    <TabelGroup titulo = 'Endereço' type = 'text' placeholder = 'Seu endereço' id = 'endereco' value = {formik.values.endereco} onChange = {formik.handleChange}/>
-                    <TabelGroup titulo = 'Email' type = 'email' placeholder = 'Seu melhor email' id = 'email' value = {formik.values.email} onChange = {formik.handleChange}/>
-                    <TabelGroup titulo = 'Telefone' type = 'tel' placeholder = 'Seu telefone' id = 'telefone' value = {formik.values.telefone} onChange = {formik.handleChange}/>
+                    <TabelGroup titulo = 'Descricao' type = 'text' placeholder = 'Seu descricao' id = 'descricao' value = {formik.values.descricao} onChange = {formik.handleChange}/>
+                    <TabelGroup titulo = 'Preço' type = 'number' placeholder = 'Seu endereço' id = 'preco' value = {formik.values.preco} onChange = {formik.handleChange}/>
+                    <TabelGroup titulo = 'Quantidade' type = 'number' placeholder = 'Seu melhor quantidade' id = 'quantidade' value = {formik.values.quantidade} onChange = {formik.handleChange}/>
                     <Form.Group>
                         <Button variant='success' type='submit' style={{marginRight: 15}} >Salvar</Button>
                         <Button variant='danger' onClick={formik.handleReset} >Limpar</Button>
@@ -59,4 +56,4 @@ const ModalUpdate: React.FC<any> = ({show, onHide, alterarUser, titulo}) => {
     );
 }
 
-export default ModalUpdate;
+export default ModalUpdateProducts;
