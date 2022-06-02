@@ -1,39 +1,42 @@
 {
   "users": [
     {
-      "nome": "Dering",
-      "cpf": 42,
+      "nome": "Dering Adriano",
+      "registro": 42365,
       "endereco": "não encontrado",
       "email": "k@gmail.com",
+      "telefone": "156487",
       "id": 4
     },
     {
       "nome": "Júnior",
-      "cpf": 455,
+      "registro": 455,
       "endereco": "rua ouro fino",
       "email": "tchau@gmail.com",
+      "telefone": "98784",
       "id": 5
     },
     {
       "nome": "Oscar",
-      "cpf": 789,
+      "registro": 789,
       "endereco": "rua castelo",
       "email": "oscar@gmail.com",
+      "telefone": "62987145632",
       "id": 6
     }
   ],
   "providers": [
     {
-      "rz": "Preço ruim",
-      "cnpj": 78464587,
+      "nome": "Preço ruim e vai piorar",
+      "registro": 78464587,
       "endereco": "rua ruim",
       "email": "preco@hotmail.com",
-      "telefone": "15456456454",
+      "telefone": "656565",
       "id": 9
     },
     {
-      "rz": "Sem Luz",
-      "cnpj": 4787112316,
+      "nome": "Sem Luz",
+      "registro": 4787112316,
       "endereco": "Rua Poste",
       "email": "luz@gmail.com",
       "telefone": "454544876154",

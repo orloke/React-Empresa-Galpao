@@ -10,7 +10,7 @@ interface TabelUserProps{
     openEditModal: (user:User)=> void
 }
 
-const TabelUser: React.FC<TabelUserProps> = ({users, deleteUser, openEditModal, openModal}) => {
+const TabelUser: React.FC<any> = ({users, deleteUser, openEditModal, openModal}) => {
 
     return (
         
@@ -30,17 +30,19 @@ const TabelUser: React.FC<TabelUserProps> = ({users, deleteUser, openEditModal, 
                         <th>Cpf</th>
                         <th>Endereço</th>
                         <th>Email</th>
+                        <th>telefone</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {users.map((user)=>(
+                    {users.map((user: any)=>(
                         <tr key={user.id}>
                             <td>{user.id}</td>
                             <td>{user.nome}</td>
-                            <td>{user.cpf}</td>
+                            <td>{user.registro}</td>
                             <td>{user.endereco}</td>
                             <td>{user.email}</td>
+                            <td>{user.telefone}</td>
                             <td>
                                 <Button type='button' variant = 'danger' style={{marginRight: 5}} onClick = {()=>deleteUser(user.id)} >
                                     <BsTrash size={18}/>

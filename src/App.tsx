@@ -1,6 +1,6 @@
-import { Fragment} from 'react'
+import { Fragment, useState} from 'react'
 import './App.css'
-import ModalComponent from './components/ModalUser'
+import ModalComponent from './components/ModalCreate'
 import Navbar from './components/Navbar'
 import TabelUser from './components/TabelUser'
 import ModalUpdate from './components/ModalUpdate'
@@ -8,9 +8,6 @@ import ModalUser from './components/hooks/ModalUser'
 import useUsers from './components/hooks/useUsers'
 import useProviders from './components/hooks/useProviders'
 import ModalProvider from './components/hooks/ModalProviders'
-import TabelProviders from './components/TabelProviders'
-import ModalUpdateProvider from './components/ModalUpdateProvider'
-import ModalComponentProvider from './components/ModalProvider'
 import HookChoiceTable from './components/hooks/HookChoiceTable'
 import ChoiceTabel from './components/ChoiceTabel'
 
@@ -53,22 +50,23 @@ function App() {
     takeTable,
     handleChoiceTable
   } = HookChoiceTable()
+
   
   return (
+
     <Fragment>
       <Navbar  />
       <ChoiceTabel takeTable= {takeTable} handleChoiceTable = {handleChoiceTable} />
       {
         takeTable == 'usuarios' ?
         <TabelUser openModal = {handleOpenModal}  users = {userGet} deleteUser = {handleDeleteUser} openEditModal = {handleOpenEditModal}/> :
-        <TabelProviders openModalProvider = {handleOpenModalProvider} users = {providersGet} deleteUser = {handleDeleteProvider} openEditModal = {handleOpenEditModalProviders}/>
+        <TabelUser openModal = {handleOpenModalProvider}  users = {providersGet} deleteUser = {handleDeleteProvider} openEditModal = {handleOpenEditModalProviders}/> 
       }
 
-      <ModalComponent show = {createModal} onHide = {handleCloseModal} createUser = {handleCreateUser} />
-      <ModalUpdate show ={editModal} onHide = {handleCloseEditModal} alterarUser = {handleUpdateUser} />
-      <ModalUpdate show ={editModal} onHide = {handleCloseEditModal} alterarUser = {handleUpdateUser} />
-      <ModalUpdateProvider show ={editModalProvider} onHide = {handleCloseEditModalProviders} alterarProvider = {handleUpdateProvider} />
-      <ModalComponentProvider show = {createModalProvider} onHide = {handleCloseModalProvider} createProvider = {handleCreateProvider} />      
+      <ModalComponent titulo = {'Usuário'} cp = {'Cpf'}  show = {createModal} onHide = {handleCloseModal} createUser = {handleCreateUser} />
+      <ModalComponent titulo = {'Fornecedor'} cp = {'Cnpj'} show = {createModalProvider} onHide = {handleCloseModalProvider} createUser = {handleCreateProvider} />
+      <ModalUpdate titulo = {'Usuário'} show ={editModal} onHide = {handleCloseEditModal} alterarUser = {handleUpdateUser}/>
+      <ModalUpdate titulo = {'Fornecedor'} show ={editModalProvider} onHide = {handleCloseEditModalProviders} alterarUser = {handleUpdateProvider} />
     </Fragment>
   )
 }

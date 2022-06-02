@@ -1,7 +1,7 @@
 export interface User {
     id: number,
     nome: string,
-    cpf: number|string,
+    registro: number,
     endereco: string,
     email: string,
     telefone: number
@@ -9,8 +9,8 @@ export interface User {
 
 export interface Providers {
     id: number,
-    rz: string, //razão social
-    cnpj: number,
+    nome: string, //razão social
+    registro: number,
     endereco: string,
     email: string,
     telefone: number
