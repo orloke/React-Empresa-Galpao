@@ -2,6 +2,7 @@ import { Button, Container, Table } from 'react-bootstrap';
 import { User } from '../@types';
 import { BsTrash, BsPen } from "react-icons/bs"
 import './style.css'
+import '../style/style.css'
 
 // interface TabelUserProps{
 //     users: User[],

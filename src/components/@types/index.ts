@@ -15,3 +15,12 @@ export interface Providers {
     email: string,
     telefone: number
 }
+
+export interface Transport {
+    id: number,
+    nome: string, //razão social
+    registro: number,
+    endereco: string,
+    email: string,
+    telefone: number
+}

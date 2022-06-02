@@ -23,6 +23,14 @@
       "email": "oscar@gmail.com",
       "telefone": "62987145632",
       "id": 6
+    },
+    {
+      "nome": "Carlos",
+      "registro": 4254879424,
+      "endereco": "Rua Carlos",
+      "email": "carlos@gmail.com",
+      "telefone": "64514894654",
+      "id": 7
     }
   ],
   "providers": [
@@ -41,6 +49,32 @@
       "email": "luz@gmail.com",
       "telefone": "454544876154",
       "id": 10
+    },
+    {
+      "nome": "Empresa da Hora",
+      "registro": 251436578,
+      "endereco": "Rua da Hora",
+      "email": "hora@gmail.com",
+      "telefone": "645214789",
+      "id": 11
+    }
+  ],
+  "transports": [
+    {
+      "nome": "Nova transportadora Top",
+      "registro": 54561654,
+      "endereco": "Rua 1",
+      "email": "nova@gmail.com",
+      "telefone": "6451548787",
+      "id": 1
+    },
+    {
+      "nome": "Segunda Transportadora",
+      "registro": 12154577,
+      "endereco": "Rua 2",
+      "email": "segunda@gmail.com",
+      "telefone": "645457841984",
+      "id": 2
     }
   ]
 }

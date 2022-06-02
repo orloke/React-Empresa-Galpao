@@ -1,6 +1,5 @@
 import axios from "axios";
-import { Provider } from "react";
-import { User, Providers } from "./components/@types";
+import { User, Providers, Transport } from "./components/@types";
 
 const api = axios.create({baseURL:"http://localhost:3333"})
 
@@ -37,4 +36,20 @@ export const updateProvider = async (id:number,user: Omit<Providers, 'id'>): Pro
 
 export const deleteProvider = async (id: number): Promise<void> => {
     await api.delete(`/providers/${id}`)
+}
+
+export const getTrasnport = async ():Promise<any> =>{
+    return await api.get('/transports')
+}
+
+export const createTransport = (user: Omit<Transport, 'id'>): Promise<Transport> =>{
+    return api.post<Transport>('/transports', user).then(response=>response.data)
+}
+
+export const updateTransport = async (id:number,user: Omit<Transport, 'id'>): Promise<Transport> => {
+    return api.put(`/transports/${id}`,user).then(response=>response.data)
+}
+
+export const deleteTransport = async (id: number): Promise<void> => {
+    await api.delete(`/transports/${id}`)
 }
