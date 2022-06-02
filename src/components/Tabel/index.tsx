@@ -3,22 +3,22 @@ import { User } from '../@types';
 import { BsTrash, BsPen } from "react-icons/bs"
 import './style.css'
 
-interface TabelUserProps{
-    users: User[],
-    openModal: ()=> void,
-    deleteUser: (id:number)=>void,
-    openEditModal: (user:User)=> void
-}
+// interface TabelUserProps{
+//     users: User[],
+//     openModal: ()=> void,
+//     deleteUser: (id:number)=>void,
+//     openEditModal: (user:User)=> void
+// }
 
-const TabelUser: React.FC<any> = ({users, deleteUser, openEditModal, openModal}) => {
+const TabelUser: React.FC<any> = ({users, deleteUser, openEditModal, openModal, titulo, cp}) => {
 
     return (
         
         <Container fluid ='sm' className='container-table'>
             <div className='cabecalho-global'>
-                <h1>Lista de Usuários</h1>
+                <h1>Lista de {titulo}</h1>
                 <Button variant='outline-success' onClick={openModal}>
-                        Adicionar usuario
+                        Adicionar {titulo}
                 </Button>
             </div>
             
@@ -27,7 +27,7 @@ const TabelUser: React.FC<any> = ({users, deleteUser, openEditModal, openModal})
                     <tr>
                         <th>#</th>
                         <th>Nome</th>
-                        <th>Cpf</th>
+                        <th>{cp}</th>
                         <th>Endereço</th>
                         <th>Email</th>
                         <th>telefone</th>

@@ -59,8 +59,8 @@ function App() {
       <ChoiceTabel takeTable= {takeTable} handleChoiceTable = {handleChoiceTable} />
       {
         takeTable == 'usuarios' ?
-        <TabelUser openModal = {handleOpenModal}  users = {userGet} deleteUser = {handleDeleteUser} openEditModal = {handleOpenEditModal}/> :
-        <TabelUser openModal = {handleOpenModalProvider}  users = {providersGet} deleteUser = {handleDeleteProvider} openEditModal = {handleOpenEditModalProviders}/> 
+        <TabelUser titulo = {'Usuário'} cp = {'Cpf'} openModal = {handleOpenModal}  users = {userGet} deleteUser = {handleDeleteUser} openEditModal = {handleOpenEditModal}/> :
+        <TabelUser titulo = {'Fornecedor'} cp = {'Cnpj'} openModal = {handleOpenModalProvider}  users = {providersGet} deleteUser = {handleDeleteProvider} openEditModal = {handleOpenEditModalProviders}/> 
       }
 
       <ModalComponent titulo = {'Usuário'} cp = {'Cpf'}  show = {createModal} onHide = {handleCloseModal} createUser = {handleCreateUser} />
