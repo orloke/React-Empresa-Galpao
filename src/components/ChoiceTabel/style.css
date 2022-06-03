@@ -14,3 +14,10 @@ h5{
     margin: auto 0 !important;
     margin-right: 1% !important;
 }
+
+@media screen and (max-width:600px) {
+    .container_choice{
+        flex-direction: column;
+        gap: 20px;
+    }
+}

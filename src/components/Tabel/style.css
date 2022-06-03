@@ -1,3 +1,17 @@
 .container-sm{
     padding: 0px !important;
 }
+
+@media screen and (max-width:770px) {
+    .td-button{
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+        min-height: 64px;
+    }
+
+    .button{
+        margin: 0 !important;
+        display: none;
+    }
+}

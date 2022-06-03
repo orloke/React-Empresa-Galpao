@@ -44,12 +44,12 @@ const TabelUser: React.FC<any> = ({users, deleteUser, openEditModal, openModal, 
                             <td>{desativar == 'none' ? 'R$ ' + Number(user.preco).toFixed(2) : user.endereco}</td>
                             <td>{desativar == 'none' ? user.quantidade : user.email}</td>
                             <td style={{display: desativar}}>{user.telefone}</td>
-                            <td>
-                                <Button type='button' variant = 'danger' style={{marginRight: 5}} onClick = {()=>deleteUser(user.id)} >
-                                    <BsTrash size={18}/>
+                            <td className='td-button'>
+                                <Button className='button' type='button' variant = 'danger' style={{marginRight: 5}} onClick = {()=>deleteUser(user.id)} >
+                                    <BsTrash className='icon' />
                                 </Button>
-                                <Button type='button' variant = 'warning' style={{marginLeft: 5}} onClick = {()=>{openEditModal(user)}}>
-                                    <BsPen size={18}/>
+                                <Button className='button' type='button' variant = 'warning' style={{marginLeft: 5}} onClick = {()=>{openEditModal(user)}}>
+                                    <BsPen className='icon' />
                                 </Button>
                             </td>
                         </tr>
