@@ -3,9 +3,6 @@ import { User, Providers, Transport, Products } from "./components/@types";
 
 const api = axios.create({baseURL:"http://localhost:3333"})
 
-// export const getUsers = ():Promise<User[]> =>{
-//     return  api.get<User[]>('/users').then(renponse=>renponse.data)
-// }
 export const getUsers = async ():Promise<any> =>{
     return await api.get('/users')
 }
